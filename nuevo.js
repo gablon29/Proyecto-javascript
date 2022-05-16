@@ -13,24 +13,27 @@ const createCards = async() => {
     const data = await getData()
     localStorage.setItem('dataAPI', JSON.stringify(data))
 
-const cards = data.map(info => `<div class="card w-25 m-2">
-<img src="..." class="card-img-top" alt="...">
+const cards = data.map(info => `
+<div class="card w-25 m-2">
 <div class="card-body">
   <h5 class="card-title">${info.title}</h5>
   <p class="card-text">${info.author}</p>
-  <a href="#" class="btn btn-primary" onclick="addfav()">Go somewhere</a>
+  <a href="#" class="btn btn-primary" onclick="addFav(${info.objectID})">😍</a>
 </div>
 </div>`)
 
 containerCards.innerHTML = cards;
 }
 createCards();
-
-const addfav = () => {
+//A continucion realizamos una funcion para guardar una tarjeta en 'localStorage'. La guardamos para que no se picen una con otra.
+const addFav = (objectID) => {
     const data = JSON.parse(localStorage.getItem('dataAPI'))
-    let existingFavs = localStorage.getItem('myFavs') || []
+    let existingFavs = JSON.parse(localStorage.getItem('myFavs')) || []
 
-    let fav = data.find(info => info.objectID == "31333029")
-    console.log(fav)
-    localStorage.setItem('myFavs', existingFavs)
+    let fav = data.find(info => info.objectID == objectID)
+    existingFavs.push(fav)
+
+
+    localStorage.setItem('myFavs', JSON.stringify(existingFavs))
+    alert(`Agregamos a favoritos: ${fav.story_title}`)
 }
