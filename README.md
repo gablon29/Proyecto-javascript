@@ -1,3 +1,8 @@
 # nuevo
-espacio de tareas nuevo.
-Este repertorio incorpora todas las paginas en mi camino hacia el desarrollo de mis capacidades como 'Desarrollador'. Pasa y mira todas mis evoluciones de este maravilloso proceso. 
+Espacio de trabajo. 🤯🤯🤓🚀
+
+¿Qué encontraras?
+Donde encontraras todo lo relacionado a los proyectos que creo en mi camino de perfeccionamiento. 
+
+
+
