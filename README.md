@@ -1,6 +1,6 @@
 <style>
     .mitext {
-        font-size: 15px;
+        font-size: 30px;
     }
 </style>
 # Hola!! (^///^)
